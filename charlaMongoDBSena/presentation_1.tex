@@ -178,7 +178,7 @@ Developer by passion \\ % Your institution for the title page
 'MongoDB (from "humongous") is an open-source document database, and the leading NoSQL database. Written in C++.'
 {\color{blue}\url{https://www.mongodb.org/}}
 \\~\\
-MongoDB was not designed in a lab. We built MongoDB from our own experiences building large-scale,high availability, robust systems..”
+'MongoDB was not designed in a lab. We built MongoDB from our own experiences building large-scale,high availability, robust systems...'
 \underline{\color{green}Eliot Horowitz, CTO and Co-Founder}	
 \end{frame}
 
@@ -231,7 +231,7 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 
 \begin{block}{Ejemplo}
 \begin{center}
-\{ "valor": "llave" \} \'o \{\}
+\{ "llave": "valor" \} \'o \{\}
 \end{center}
 \end{block}
 \end{frame}
@@ -240,14 +240,20 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 
 \begin{frame}
 \frametitle{JSON}
-\begin{block}{valor}
+\begin{block}{Definici\'on array}
  Es el tipo de dato que puede contener un JSON.
 \end{block}
 
-\begin{block}{array}
+\begin{block}{Esquema}
 \begin{figure}
 \includegraphics[width=0.7\linewidth]{array.png}
 \end{figure}
+\end{block}
+
+\begin{block}{Ejemplo}
+\begin{center}
+["valor1", "sena",2014,true]
+\end{center}
 \end{block}
 
 \end{frame}
@@ -256,7 +262,7 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 
 \begin{frame}
 \frametitle{JSON}
-\begin{block}{valor}
+\begin{block}{Definici\'on valor}
  Es el tipo de dato que puede contener un JSON.
 \end{block}
 
@@ -272,7 +278,7 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 
 \begin{frame}
 \frametitle{JSON}
-\begin{block}{string}
+\begin{block}{Esquema string}
 \begin{figure}
 \includegraphics[width=0.7\linewidth]{string.png}
 \end{figure}
@@ -285,7 +291,7 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 
 \begin{frame}
 \frametitle{JSON}
-\begin{block}{number}
+\begin{block}{Esquema number}
 \begin{figure}
 \includegraphics[width=0.7\linewidth]{number.png}
 \end{figure}
@@ -312,8 +318,8 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+Son documentos tipo \textbf{JSON} con esquemas dinamicos que ofrecen simplicidad y potencia.
+Los datos en MongoDB tienen esquemas flexibles. y las \textbf{colecciones} no obligan a mantener una estructura.
 \end{columns}
 \end{frame}
 
