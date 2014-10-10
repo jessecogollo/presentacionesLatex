@@ -318,8 +318,10 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Son documentos tipo \textbf{JSON} con esquemas dinamicos que ofrecen simplicidad y potencia.
-Los datos en MongoDB tienen esquemas flexibles. y las \textbf{colecciones} no obligan a mantener una estructura.
+Las \textbf{colecciones} Son esquemas dinamicos, flexibles que ofrecen simplicidad y potencia.
+\begin{figure}
+\includegraphics[width=0.9\linewidth]{document.png}
+\end{figure}
 \end{columns}
 \end{frame}
 
@@ -343,8 +345,11 @@ Los datos en MongoDB tienen esquemas flexibles. y las \textbf{colecciones} no ob
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+Index provee alto desempeño en operaciones de lecturas.
+\begin{figure}
+\includegraphics[width=1\linewidth]{index-with-query.png}
+\end{figure}
+MongoDB indexa utilizando estructura de datos B-tree.
 \end{columns}
 \end{frame}
 
@@ -368,8 +373,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+replica set en MongoDB es un grupo de procesos mongod que mantienen el mismo conjunto de datos. provee redundancia y alta disponibilidad.
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{replica-set-read-write-operations-primary.png}
+\end{figure}
 \end{columns}
 \end{frame}
 
@@ -393,8 +400,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+Escalar horizontalmente sin comprometer la funcionalidad.
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{sharded-collection.png}
+\end{figure}
 \end{columns}
 \end{frame}
 
