@@ -311,7 +311,6 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 \item Replication y High Availability
 \item Auto Sharding
 \item Querying
-\item Fast In Place Updates
 \item Map Reduce
 \item GridFS
 \item Other more...
@@ -338,14 +337,13 @@ Las \textbf{colecciones} Son esquemas dinamicos, flexibles que ofrecen simplicid
 \item Replication y High Availability
 \item Auto Sharding
 \item Querying
-\item Fast In Place Updates
 \item Map Reduce
 \item GridFS
 \item Other more...
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Index provee alto desempeño en operaciones de lecturas.
+Index provee alto desempeno en operaciones de lecturas.
 \begin{figure}
 \includegraphics[width=1\linewidth]{index-with-query.png}
 \end{figure}
@@ -366,7 +364,6 @@ MongoDB indexa utilizando estructura de datos B-tree.
 \item \textbf{Replication y High Availability}
 \item Auto Sharding
 \item Querying
-\item Fast In Place Updates
 \item Map Reduce
 \item GridFS
 \item Other more...
@@ -393,7 +390,6 @@ replica set en MongoDB es un grupo de procesos mongod que mantienen el mismo con
 \item Replication y High Availability
 \item \textbf{Auto Sharding}
 \item Querying
-\item Fast In Place Updates
 \item Map Reduce
 \item GridFS
 \item Other more...
@@ -420,18 +416,22 @@ Escalar horizontalmente sin comprometer la funcionalidad.
 \item Replication y High Availability
 \item Auto Sharding
 \item \textbf{Querying}
-\item Fast In Place Updates
 \item Map Reduce
 \item GridFS
 \item Other more...
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+Gran cantidad de consultas basadas en los documentos.
+\begin{example}[querys]
+db.collection.find(\{\})
+\\~\\
+db.collection.find(\{'field':'jesse'\})
+\\~\\
+db.inventory.find().sort(\{field:1\})
+\end{example}
 \end{columns}
 \end{frame}
-
 
 %------------------------------------------------
 \begin{frame}
@@ -445,40 +445,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \item Replication y High Availability
 \item Auto Sharding
 \item Querying
-\item\textbf{Fast In Place Updates}
-\item Map Reduce
-\item GridFS
-\item Other more...
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
-\end{frame}
-
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\begin{enumerate}
-\item Document-Oriented Storage
-\item Full Index Support
-\item Replication y High Availability
-\item Auto Sharding
-\item Querying
-\item Fast In Place Updates
 \item \textbf{Map Reduce}
 \item GridFS
 \item Other more...
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+Map Reduce es un paradigma de procesamiento de datos para condensar grandes volumenes de datos.
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{distinct.png}
+\end{figure}
 \end{columns}
 \end{frame}
 
@@ -495,15 +471,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \item Replication y High Availability
 \item Auto Sharding
 \item Querying
-\item Fast In Place Updates
 \item Map Reduce
 \item \textbf{GridFS}
 \item Other more...
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+GridFS es una especificaci\'on para almacenar y recuperar archivos que exceden el limite del tamano de 16MB en los documentos BSON.
+\\~\\
+util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc...
 \end{columns}
 \end{frame}
 
@@ -520,14 +496,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \item Replication y High Availability
 \item Auto Sharding
 \item Querying
-\item Fast In Place Updates
 \item Map Reduce
 \item GridFS
 \item \textbf{Other more...}
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+\begin{itemize}
+\item MMS.
+\item Partner with MongoDB.
+\item Multiples drivers.
+\end{itemize}
 
 \end{columns}
 \end{frame}
@@ -538,16 +517,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \frametitle{Instalacion}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
+\column{.50\textwidth} % Left column and width
+\begin{block}{Terminal}
 \begin{enumerate}
 \item Statement
 \item Explanation
 \item Example
 \end{enumerate}
+\end{block}
 
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+%\column{.5\textwidth} % Right column and width
+%\begin{block}{casa}
+%\begin{enumerate}
+%\item Statement
+%\item Explanation
+%\item Example
+%\end{enumerate}
+%\end{block}
 
 \end{columns}
 \end{frame}
