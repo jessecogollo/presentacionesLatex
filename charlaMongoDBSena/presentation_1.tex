@@ -309,13 +309,13 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
 \item \textbf{Document-Oriented Storage}
-\item Full Index Support
-\item Replication y High Availability
-\item Auto Sharding
-\item Querying
-\item Map Reduce
-\item GridFS
-\item Other more...
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -336,12 +336,12 @@ Las \textbf{colecciones} Son esquemas dinamicos, flexibles que ofrecen simplicid
 \begin{enumerate}
 \item Document-Oriented Storage
 \item \textbf{Full Index Support}
-\item Replication y High Availability
-\item Auto Sharding
-\item Querying
-\item Map Reduce
-\item GridFS
-\item Other more...
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -363,12 +363,12 @@ MongoDB indexa utilizando estructura de datos B-tree.
 \begin{enumerate}
 \item Document-Oriented Storage
 \item Full Index Support
-\item \textbf{Replication y High Availability}
-\item Auto Sharding
-\item Querying
-\item Map Reduce
-\item GridFS
-\item Other more...
+\item \textbf{Replication}
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -389,12 +389,12 @@ replica set en MongoDB es un grupo de procesos mongod que mantienen el mismo con
 \begin{enumerate}
 \item Document-Oriented Storage
 \item Full Index Support
-\item Replication y High Availability
+\item Replication
 \item \textbf{Auto Sharding}
-\item Querying
-\item Map Reduce
-\item GridFS
-\item Other more...
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -415,12 +415,12 @@ Escalar horizontalmente sin comprometer la funcionalidad.
 \begin{enumerate}
 \item Document-Oriented Storage
 \item Full Index Support
-\item Replication y High Availability
+\item Replication
 \item Auto Sharding
 \item \textbf{Querying}
-\item Map Reduce
-\item GridFS
-\item Other more...
+\item[•]	
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -432,7 +432,7 @@ db.collection.find(\{'field':'jesse'\})
 \\~\\
 db.inventory.find().sort(\{field:1\})
 \end{example}
-\end{columns}
+\end{columns}	
 \end{frame}
 
 %------------------------------------------------
@@ -444,12 +444,12 @@ db.inventory.find().sort(\{field:1\})
 \begin{enumerate}
 \item Document-Oriented Storage
 \item Full Index Support
-\item Replication y High Availability
+\item Replication
 \item Auto Sharding
 \item Querying
 \item \textbf{Map Reduce}
-\item GridFS
-\item Other more...
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -470,12 +470,12 @@ Map Reduce es un paradigma de procesamiento de datos para condensar grandes volu
 \begin{enumerate}
 \item Document-Oriented Storage
 \item Full Index Support
-\item Replication y High Availability
+\item Replication
 \item Auto Sharding
 \item Querying
 \item Map Reduce
 \item \textbf{GridFS}
-\item Other more...
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
@@ -495,7 +495,7 @@ util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc..
 \begin{enumerate}
 \item Document-Oriented Storage
 \item Full Index Support
-\item Replication y High Availability
+\item Replication
 \item Auto Sharding
 \item Querying
 \item Map Reduce
@@ -513,104 +513,31 @@ util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc..
 \end{columns}
 \end{frame}
 
-
 %------------------------------------------------
-\begin{frame}
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
 \frametitle{Instalaci\'on}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+%\begin{example}[Terminal -{http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/}]
+\textbf{Desde Terminal}
+\begin{lstlisting}[language=json,firstnumber=1]
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org-shell=2.6.1 mongodb-org-mongos=2.6.1 mongodb-org-tools=2.6.1
+sudo service mongod start
+mongo
+\end{lstlisting}
 
-\column{1\textwidth} % Left column and width
-\begin{block}{Ubuntu - Terminal}
-\begin{enumerate}
-\item \textbf{http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/}
-\item sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-\item echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
-\item sudo apt-get update
-\item sudo apt-get install -y mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org-shell=2.6.1 mongodb-org-mongos=2.6.1 mongodb-org-tools=2.6.1
-\item sudo service mongod start
-\end{enumerate}
-\end{block}
-
-%\column{.5\textwidth} % Right column and width
-%\begin{block}{casa}
-%\begin{enumerate}
-%\item Statement
-%\item Explanation
-%\item Example
-%\end{enumerate}
-%\begin{verbatim}
-%\end{verbatim}
-%\end{block}
-
-\end{columns}
+%\end{example}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
 \frametitle{SHELL}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-%\begin{lstlisting}[language=json,firstnumber=1]
-%Put your code here.
-%\end{lstlisting}
-%\begin{verbatim}
-%for i in range(1, 5):
-%  print i
-%else:
-%  print "The for loop is over"
-%\end{verbatim}
-texto
-\end{columns}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Insert Find Update Remove (CRUD)}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{DEMO =)}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
+\begin{figure}
+\includegraphics[width=1\linewidth]{shellterminal.png}
+\end{figure}
 \end{frame}
 
 %------------------------------------------------
@@ -633,6 +560,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \end{columns}
 \end{frame}
 
+%------------------------------------------------
+\begin{frame}
+\frametitle{Insert Find Update Remove (CRUD)}
+\begin{block}{\textbf{I}FUR}
+db.collection.insert(\{"name":"sena","decription":"CEGE"\})
+\end{block}
+\begin{block}{I\textbf{F}UR}
+db.collection.find(\{"name":"sena"\})
+\end{block}
+\begin{block}{IF\textbf{U}R}
+db.collection.update(\{\$set:\{"name":"sena"\},
+\{"decription":"CESGE"\}\})
+\end{block}
+\begin{block}{IFU\textbf{R}}
+db.collection.remove(\{"name":"sena"\})
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{DEMO =)}
+=)
+%\begin{figure}
+%\includegraphics[width=0.7\linewidth]{value.png}
+%\end{figure}
+\end{frame}
 
 %------------------------------------------------
 \section{MongoDB Medellin}
