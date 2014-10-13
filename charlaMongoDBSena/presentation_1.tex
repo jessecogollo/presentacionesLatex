@@ -80,10 +80,12 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{color}
 
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
-\definecolor{delim}{RGB}{20,105,176}
+\definecolor{delim}{RGB}{25,134,57}
+%\definecolor{delim}{RGB}{20,105,176}
 \colorlet{numb}{magenta!60!black}
 
 \lstdefinelanguage{json}{
@@ -514,15 +516,18 @@ util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc..
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Instalacion}
+\frametitle{Instalaci\'on}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-\column{.50\textwidth} % Left column and width
-\begin{block}{Terminal}
+\column{1\textwidth} % Left column and width
+\begin{block}{Ubuntu - Terminal}
 \begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
+\item \textbf{http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/}
+\item sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+\item echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+\item sudo apt-get update
+\item sudo apt-get install -y mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org-shell=2.6.1 mongodb-org-mongos=2.6.1 mongodb-org-tools=2.6.1
+\item sudo service mongod start
 \end{enumerate}
 \end{block}
 
@@ -533,6 +538,8 @@ util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc..
 %\item Explanation
 %\item Example
 %\end{enumerate}
+%\begin{verbatim}
+%\end{verbatim}
 %\end{block}
 
 \end{columns}
@@ -553,8 +560,16 @@ util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc..
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
+%\begin{lstlisting}[language=json,firstnumber=1]
+%Put your code here.
+%\end{lstlisting}
+%\begin{verbatim}
+%for i in range(1, 5):
+%  print i
+%else:
+%  print "The for loop is over"
+%\end{verbatim}
+texto
 \end{columns}
 \end{frame}
 
