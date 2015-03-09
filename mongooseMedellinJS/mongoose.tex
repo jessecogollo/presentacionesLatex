@@ -1,0 +1,236 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+\mode<presentation> {
+\usetheme{Singapore}
+%\usecolortheme{whale}
+%\useoutertheme{shadow}
+%\useoutertheme{sidebar}
+
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\setbeamertemplate{background canvas}[vertical shading][bottom=white,top=structure.fg!25]
+%\setbeamertemplate{sidebar canvas left}[horizontal shading][left=white!40!black,right=black]
+
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{25,134,57}
+\colorlet{numb}{magenta!60!black}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\title[@Mongoosejs]{@MongoDB + @javascript = @mongoosejs}
+\author{Jesse Javier Cogollo Alvarez}
+\institute[EAFIT]
+{
+Developer by passion \\
+\medskip
+\textit{twitter: @jessecogollo}
+}
+\date{\today}
+\subject{@mongoose}
+
+\begin{document}
+	\begin{frame}
+		\titlepage % Print the title page as the first slide
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%\begin{frame}
+%\frametitle{Some background}
+%We start our discussion with some concepts.
+%\pause
+%The first concept we introduce originates with Erd\H os.
+%\pause
+%otro pause
+%\pause
+%mas pausse...
+%\pause
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{`Hidden higher-order concepts?'}
+%	\begin{itemize}[<+->]
+%	\item The truths of arithmetic which are independent of PA in some 
+%	sense themselves `{contain} essentially {\color{blue}{hidden higher-order}},
+%	 or infinitary, concepts'???
+%	\item `Truths in the language of arithmetic which \ldots
+%	\item	That suggests stronger version of Isaacson's thesis. 
+%	\end{itemize}
+%\end{frame}
+%------------------------------------------------
+\section{MongoDB}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Que es @MongoDB}
+'MongoDB (from "humongous") is an open-source document database, and the leading NoSQL database. Written in C++.'
+{\color{blue}\url{https://www.mongodb.org/}}
+\pause
+\\~\\
+'MongoDB was not designed in a lab. We built MongoDB from our own experiences building large-scale,high availability, robust systems...'
+\underline{\color{green}Eliot Horowitz, CTO and Co-Founder}	
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{NOSQL}
+“En inform\'atica, NoSQL (a veces llamado 'no só\'olo SQL') es una amplia clase de sistemas de gesti\'on de bases de datos que difieren del modelo cl\'asico del sistema de gesti\'on de bases de datos relacionales (RDBMS) en aspectos importantes, el m\'as destacado que no usan SQL como el principal lenguaje de consultas.” {\color{blue}\url{http://es.wikipedia.org/wiki/NoSQL/}}
+\\~\\
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{NOSQL}
+Las caracteristicas comunes de las bases de datos NoSQL son:
+\begin{itemize}[<+->]
+\item No utilizan el modelo relacional.
+\item Corren bien en clusters.
+\item Open-source.
+\item sin esquemas.
+\item El resultado mas importante del aumento de las bases de datos NoSQL es la {\color{green}Persistencia Pol\'iglota}.
+\\~\\
+{\color{blue}\url{http://martinfowler.com/articles/nosqlKeyPoints.html}}
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Persistencia pol\'iglota}
+\begin{figure}
+\includegraphics[width=1.0\linewidth]{polyglot.png}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Caracteristicas}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\pause
+\item Document-Oriented Storage
+\pause
+\item Full Index Support
+\pause
+\item Replication
+\pause
+\item Auto Sharding
+\pause
+\item Querying
+\pause
+\item Map Reduce
+\pause
+\item GridFS
+\pause
+\item \textbf{Other more...}
+\end{enumerate}
+\column{.5\textwidth} % Right column and width
+\begin{itemize}
+\item MMS.
+\item Partner with MongoDB.
+\item Multiples drivers.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Insert Find Update Remove (CRUD)}
+\begin{block}{\textbf{I}FUR}
+db.meetups.insert(\{"name":"mongoosejs","place":"Ruta N"\})
+\end{block}
+\begin{block}{I\textbf{F}UR}
+db.meetups.find(\{"name":"mongoosejs"\})
+\end{block}
+\begin{block}{IF\textbf{U}R}
+db.meetups.update(\{"name":"mongoosejs"\},
+\{\$set:\{"description":"Ruta N, piso 0."\}\})
+\end{block}
+\begin{block}{IFU\textbf{R}}
+db.meetups.remove(\{"name":"mongoosejs"\})
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+\section{javascript}
+%------------------------------------------------
+\begin{frame}
+\frametitle{NodeJS - IOJS}
+NodeJS es una plataforma de javascript construida sobre el "motor" V8 de Chrome.
+{\color{blue}\url{https://nodejs.org//}}
+\pause
+\\~\\
+IOJS es un fork de NodeJS. Implementando ES6 y desarrollado bajo un modelo de gobierno abierto.
+{\color{blue}\url{https://iojs.org//}}
+\end{frame}
+%------------------------------------------------	
+\section{mongoose}
+\begin{frame}
+\frametitle{mongoose}
+\end{frame}
+
+\begin{frame}
+\frametitle{Comunidad}
+\begin{enumerate}
+\item Meetup -> medellinjs  - mongodbmedellin
+\item Twitter -> @medellinjs - @mongodbmedelln
+\item Facebook -> /mongodbmedellin
+\item gitter (chat) -> https://gitter.im/coljs/medellinjs
+\item gitter (chat) -> https://gitter.im/MongoDBMedellin/Meetup
+\end{enumerate}
+\end{frame}
+%------------------------------------------------	
+\begin{frame}
+\frametitle{Donde aprender}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[]{p1} javascript (nodeJS)
+\newblock http://nodeschool.io//
+\end{thebibliography}
+}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[]{p1} MongoDB
+\newblock https://university.mongodb.com/
+\end{thebibliography}
+}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Preguntas}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Gracias !!! =)}}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+\end{document} 
