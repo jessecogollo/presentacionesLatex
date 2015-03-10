@@ -58,6 +58,41 @@
   breakatwhitespace=true,
   tabsize=3
 }
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  sensitive=true
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -216,11 +251,11 @@ IOJS es un fork de NodeJS. Implementando ES6 y desarrollado bajo un modelo de go
 \end{frame}
 %------------------------------------------------	
 \section{mongoose}
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{mongoose}
-\pause
-instalaci\'on
-\\~\\
+\newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}\\}
+  \noindent instalaci\'on (En el directorio del proyecto.)
+  \shellcmd{npm install mongoose --save}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -233,6 +268,8 @@ instalaci\'on
                 morecomment=[l][\color{magenta}]{\#}
 }
 \begin{lstlisting}
+	#var Q = require('q');
+	var Q = require('q');
     #include<stdio.h>
     #include<iostream>
     // A comment
@@ -296,6 +333,29 @@ public class Hello extends JApplet {
 }
 \end{lstlisting}
 \end{frame}
+
+\begin{frame}[fragile]
+
+\medskip
+\begin{lstlisting}[caption=My Javascript Example]
+Name.prototype = {
+  methodName: function(params){
+    var doubleQuoteString = "some text";
+    var singleQuoteString = 'some more text';
+    // this is a comment
+    if(this.confirmed != null && typeof(this.confirmed) == Boolean && this.confirmed == true){
+      document.createElement('h3');
+      $('#system').append("This looks great");
+      return false;
+    } else {
+      throw new Error;
+    }
+  }
+}
+\end{lstlisting}
+
+\end{frame}
+
 
 \begin{frame}[fragile]
 
