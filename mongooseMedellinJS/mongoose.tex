@@ -29,39 +29,17 @@
 \usepackage{xcolor}
 \usepackage{color}
 \colorlet{punct}{red!60!black}
+\colorlet{numb}{magenta!60!black}
 \definecolor{background}{HTML}{EEEEEE}
 \definecolor{delim}{RGB}{25,134,57}
-\colorlet{numb}{magenta!60!black}
-
-\setbeamercovered{transparent}
-
-\usepackage{listings}
-\usepackage{color}
-
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\lstset{frame=tb,
-  language=Java,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\small\ttfamily},
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true,
-  tabsize=3
-}
-
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\setbeamercovered{transparent}
 
 \lstdefinelanguage{JavaScript}{
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
@@ -121,28 +99,6 @@ Developer by passion \\
 %	PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
 
-%\begin{frame}
-%\frametitle{Some background}
-%We start our discussion with some concepts.
-%\pause
-%The first concept we introduce originates with Erd\H os.
-%\pause
-%otro pause
-%\pause
-%mas pausse...
-%\pause
-%\end{frame}
-
-%\begin{frame}
-%	\frametitle{`Hidden higher-order concepts?'}
-%	\begin{itemize}[<+->]
-%	\item The truths of arithmetic which are independent of PA in some 
-%	sense themselves `{contain} essentially {\color{blue}{hidden higher-order}},
-%	 or infinitary, concepts'???
-%	\item `Truths in the language of arithmetic which \ldots
-%	\item	That suggests stronger version of Isaacson's thesis. 
-%	\end{itemize}
-%\end{frame}
 %------------------------------------------------
 \section{MongoDB}
 %------------------------------------------------
@@ -259,82 +215,6 @@ IOJS es un fork de NodeJS. Implementando ES6 y desarrollado bajo un modelo de go
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Inserting source code}
-\lstset{language=C++,
-                basicstyle=\ttfamily,
-                keywordstyle=\color{blue}\ttfamily,
-                stringstyle=\color{red}\ttfamily,
-                commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}
-}
-\begin{lstlisting}
-	#var Q = require('q');
-	var Q = require('q');
-    #include<stdio.h>
-    #include<iostream>
-    // A comment
-    int main(void)
-    {
-    printf("Hello World\n");
-    return 0;
-    }
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Inserting source code without setting typewriter}
-\lstset{language=C++,
-                keywordstyle=\color{blue},
-                stringstyle=\color{red},
-                commentstyle=\color{green},
-                morecomment=[l][\color{magenta}]{\#}
-}
-\begin{lstlisting}
-    #include<stdio.h>
-    #include<iostream>
-    // A comment
-    int main(void)
-    {
-    printf("Hello World\n");
-    return 0;
-    }
-\end{lstlisting}
-\end{frame}
-
-\defverbatim[colored]\lstI{
-\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
-int main() {
-  // Define variables at the beginning
-  // of the block, as in C:
-  CStash intStash, stringStash;
-  int i;
-  char* cp;
-  ifstream in;
-  string line;
-[...]
-\end{lstlisting}
-}
-
-\begin{frame}{A Listings Demo}{C++}
-\lstI
-\end{frame}
-
-
-\begin{frame}[fragile]
-\begin{lstlisting}
-// Hello.java
-import javax.swing.JApplet;
-import java.awt.Graphics;
-
-public class Hello extends JApplet {
-    public void paintComponent(Graphics g) {
-        g.drawString("Hello, world!", 65, 95);
-    }    
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
 
 \medskip
 \begin{lstlisting}[caption=My Javascript Example]
@@ -356,15 +236,6 @@ Name.prototype = {
 
 \end{frame}
 
-
-\begin{frame}[fragile]
-
-\newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}\\}
-  \noindent Consider the following command:
-  \shellcmd{apt-get --purge remove rubygems}
-  This removes the \texttt{rubygems} package.
-
-\end{frame}
 
 \begin{frame}
 \frametitle{Comunidad}
