@@ -178,23 +178,27 @@ Las caracteristicas comunes de las bases de datos NoSQL son:
 %------------------------------------------------
 \begin{frame}
 \frametitle{Insert Find Update Remove (CRUD)}
+\pause
 \begin{block}{\textbf{I}FUR}
 db.meetups.insert(\{"name":"mongoosejs","place":"Ruta N"\})
 \end{block}
+\pause
 \begin{block}{I\textbf{F}UR}
 db.meetups.find(\{"name":"mongoosejs"\})
 \end{block}
+\pause
 \begin{block}{IF\textbf{U}R}
 db.meetups.update(\{"name":"mongoosejs"\},
 \{\$set:\{"description":"Ruta N, piso 0."\}\})
 \end{block}
+\pause
 \begin{block}{IFU\textbf{R}}
 db.meetups.remove(\{"name":"mongoosejs"\})
 \end{block}
 \end{frame}
 
 %------------------------------------------------
-\section{javascript}
+\section{Javascript}
 %------------------------------------------------
 \begin{frame}
 \frametitle{NodeJS - IOJS}
@@ -206,34 +210,71 @@ IOJS es un fork de NodeJS. Implementando ES6 y desarrollado bajo un modelo de go
 {\color{blue}\url{https://iojs.org//}}
 \end{frame}
 %------------------------------------------------	
-\section{mongoose}
+\section{Mongoose}
 \begin{frame}[fragile]
-\frametitle{mongoose}
+\frametitle{Mongoose}
+Un driver de MongoDB con NodeJS
+\pause
+\\~\\
 \newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}\\}
   \noindent instalaci\'on (En el directorio del proyecto.)
   \shellcmd{npm install mongoose --save}
 \end{frame}
 
+\begin{frame}
+\frametitle{Entendiendo mongoosejs}
+\begin{columns}[c]
+\column{.3\textwidth} % Left column and width
+Esquema
+\column{.6\textwidth} % Right column and width
+Un esquema es mapeado como una colecci\'on en MongoDB y 
+define la forma de los documentos  con esa colecci\'on.
+\end{columns}
+\end{frame}
+
 \begin{frame}[fragile]
-
+\frametitle{Schema}
 \medskip
-\begin{lstlisting}[caption=My Javascript Example]
-Name.prototype = {
-  methodName: function(params){
-    var doubleQuoteString = "some text";
-    var singleQuoteString = 'some more text';
-    // this is a comment
-    if(this.confirmed != null && typeof(this.confirmed) == Boolean && this.confirmed == true){
-      document.createElement('h3');
-      $('#system').append("This looks great");
-      return false;
-    } else {
-      throw new Error;
-    }
-  }
-}
-\end{lstlisting}
+\begin{lstlisting}
+var mongoose = require('mongoose');
+var schema = mongoose.schema;
+var userSchema = Schema({
+  firstName:String,
+  lastName:String,
+  telefones:{
+    primary:String,
+    secundary:String
+  },
+  hobbies:Array
+});
 
+\end{lstlisting}
+Tipos: Number, Date, Buffer, Boolean, mixed and ObjectId.
+\end{frame}
+
+\begin{frame}
+\frametitle{Entendiendo mongoosejs}
+\begin{columns}[c]
+\column{.3\textwidth} % Left column and width
+modelos
+\column{.6\textwidth} % Right column and width
+Un modelo es un constructor compilado de nuestra definici\'on de esquema.
+y representan los documentos que pueden ser guardados y recuperados de la base de datos.
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Model}
+\medskip
+\begin{lstlisting}
+var User = mongoose.model('User',userSchema);
+\end{lstlisting}
+Ya tenemos a User listo para Insertar, encontrar, actualizar y eliminar.
+Pero adem\'as, le podemos crear nuestras propias acciones.
+
+\begin{lstlisting}
+userSchema.methods.nameAction = function(){}
+\end{lstlisting}
 \end{frame}
 
 
