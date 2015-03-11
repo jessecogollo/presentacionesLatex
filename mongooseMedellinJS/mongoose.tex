@@ -270,13 +270,52 @@ y representan los documentos que pueden ser guardados y recuperados de la base d
 var User = mongoose.model('User',userSchema);
 \end{lstlisting}
 Ya tenemos a User listo para Insertar, encontrar, actualizar y eliminar.
-Pero adem\'as, le podemos crear nuestras propias acciones.
+Pero adem\'as, le podemos crear nuestras propias acciones al schema.
 
 \begin{lstlisting}
-userSchema.methods.nameAction = function(){}
+userSchema.methods.findSimilarLastNames = function (cb) {
+  return this.model('User').find({ lastName: this.lastName }, cb);
+}
 \end{lstlisting}
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Metodos estaticos}
+Statics
+\\~\\
+Agregar metodos estaticos a un modelo es simple.
+\medskip
+\begin{lstlisting}
+userSchema.statics.findByName = function (name, cb) {
+  this.find({ firstName: new RegExp(name, 'i') }, cb);
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Indexes}
+Los indices se pueden definir a nivel de esquema o a nivel de campo.
+\\~\\
+Campo
+\begin{lstlisting}
+firstName:{type:String, index:true}
+\end{lstlisting}
+Esquema
+\begin{lstlisting}
+animalSchema.index({firstName:1});
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+\frametitle{Virtuals}
+\begin{columns}[c]
+\column{.3\textwidth} % Left column and width
+get - set
+\column{.6\textwidth} % Right column and width
+Un modelo es un constructor compilado de nuestra definici\'on de esquema.
+y representan los documentos que pueden ser guardados y recuperados de la base de datos.
+\end{columns}
+\end{frame}
 
 \begin{frame}
 \frametitle{Comunidad}
