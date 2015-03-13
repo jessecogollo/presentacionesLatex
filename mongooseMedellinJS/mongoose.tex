@@ -213,7 +213,7 @@ IOJS es un fork de NodeJS. Implementando ES6 y desarrollado bajo un modelo de go
 \section{Mongoose}
 \begin{frame}[fragile]
 \frametitle{Mongoose}
-Un driver de MongoDB con NodeJS
+Es una herramienta para el modelado de objetos MongoDB. Dise\~nado para trabajar en un ambiente asincronico.
 \pause
 \\~\\
 \newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}\\}
@@ -227,7 +227,7 @@ Un driver de MongoDB con NodeJS
 \column{.3\textwidth} % Left column and width
 Esquema
 \column{.6\textwidth} % Right column and width
-Un esquema es mapeado como una colecci\'on en MongoDB y 
+Un esquema es mapeado como una \textbf{colecci\'on} en MongoDB y 
 define la forma de los documentos  con esa colecci\'on.
 \end{columns}
 \end{frame}
@@ -259,7 +259,7 @@ Tipos: Number, Date, Buffer, Boolean, mixed and ObjectId.
 modelos
 \column{.6\textwidth} % Right column and width
 Un modelo es un constructor compilado de nuestra definici\'on de esquema.
-y representan los documentos que pueden ser guardados y recuperados de la base de datos.
+y representan los \textbf{documentos} que pueden ser guardados y recuperados de la base de datos.
 \end{columns}
 \end{frame}
 
@@ -302,7 +302,7 @@ firstName:{type:String, index:true}
 \end{lstlisting}
 Esquema
 \begin{lstlisting}
-animalSchema.index({firstName:1});
+userSchema.index({firstName:1});
 \end{lstlisting}
 \end{frame}
 
@@ -310,10 +310,53 @@ animalSchema.index({firstName:1});
 \frametitle{Virtuals}
 \begin{columns}[c]
 \column{.3\textwidth} % Left column and width
-get - set
+Los metodos virtuales no se pueden persistir. Estos pueden ser GET o SET.
 \column{.6\textwidth} % Right column and width
-Los metodos virtuales no se pueden persistir.
+GET: \'utiles para para formatear o combinar campos.
+\\~\\
+SET: \'utiles para descomponer un valor en m\'ultiples valores. 
 \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Virtuals GET - SET}
+\medskip
+\begin{lstlisting}
+userSchema.virtual('fullName').get(function () {
+  return this.firstName + ' ' + this.lastName;
+});
+\end{lstlisting}
+
+\begin{lstlisting}
+userSchema.virtual('fullName').set(function (fullName) {
+  var split = fullName.split(' ');
+  this.firstName = split[0];
+  this.lastName = split[1];
+});
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+\frametitle{Options}
+\begin{columns}[c]
+\column{.3\textwidth} % Left column and width
+Son un conjunto de opciones que son configurables.
+\column{.6\textwidth} % Right column and width
+\begin{itemize}[<+->]
+\item autoIndex
+\item capped
+\item collection
+\item id
+\item \_id
+\item read
+\item more...
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Plugins}
+{\color{blue}\url{http://plugins.mongoosejs.com/}}
 \end{frame}
 
 \begin{frame}
