@@ -238,7 +238,7 @@ define la forma de los documentos  con esa colecci\'on.
 \begin{lstlisting}
 var mongoose = require('mongoose');
 var schema = mongoose.schema;
-var userSchema = Schema({
+var userSchema = new Schema({
   firstName:String,
   lastName:String,
   telefones:{
@@ -256,7 +256,7 @@ Tipos: Number, Date, Buffer, Boolean, mixed and ObjectId.
 \frametitle{Entendiendo mongoosejs}
 \begin{columns}[c]
 \column{.3\textwidth} % Left column and width
-modelos
+model
 \column{.6\textwidth} % Right column and width
 Un modelo es un constructor compilado de nuestra definici\'on de esquema.
 y representan los \textbf{documentos} que pueden ser guardados y recuperados de la base de datos.
@@ -349,14 +349,23 @@ Son un conjunto de opciones que son configurables.
 \item id
 \item \_id
 \item read
-\item more...
+\item mas...
 \end{itemize}
 \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Plugins}
-{\color{blue}\url{http://plugins.mongoosejs.com/}}
+\frametitle{Mas...}
+\begin{itemize}[<+->]
+\item plugins
+\item validadores (validate)
+\item lanzadores (pre, post)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{DEMO !!!}
+=)
 \end{frame}
 
 \begin{frame}
@@ -364,9 +373,9 @@ Son un conjunto de opciones que son configurables.
 \begin{enumerate}
 \item Meetup: medellinjs  - mongodbmedellin
 \pause
-\item Twitter: @medellinjs - @mongodbmedelln
+\item Twitter: @medellinjs - @mongodbmedelln - @avanet
 \pause
-\item Facebook: /mongodbmedellin
+\item Facebook: /mongodbmedellin /avanet
 \pause
 \item gitter (chat): https://gitter.im/coljs/medellinjs
 \pause
@@ -394,6 +403,9 @@ Son un conjunto de opciones que son configurables.
 %------------------------------------------------
 \begin{frame}
 \frametitle{Preguntas}
+\begin{figure}
+\includegraphics[width=0.4\linewidth]{preguntas.png}
+\end{figure}
 \end{frame}
 
 %------------------------------------------------
