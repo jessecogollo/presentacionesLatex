@@ -18,62 +18,11 @@
 \documentclass{beamer}
 
 \mode<presentation> {
-
-% The Beamer class comes with a number of default slide themes
-% which change the colors and layouts of slides. Below this is a list
-% of all the themes, uncomment each in turn to see what they look like.
-
-%\usetheme{default}
-%\usetheme{AnnArbor}
-%\usetheme{Antibes}
-%\usetheme{Bergen}
-%\usetheme{Berkeley}
-%\usetheme{Berlin}
-%\usetheme{Boadilla}
-%\usetheme{CambridgeUS}
-%\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
-%\usetheme{Dresden}
-%\usetheme{Frankfurt}
-%\usetheme{Goettingen}
-%\usetheme{Hannover}punto
-%\usetheme{Ilmenau}
-%\usetheme{JuanLesPins}punto
-%\usetheme{Luebeck}
-%\usetheme{Madrid}punto
-%\usetheme{Malmoe}
-%\usetheme{Marburg}
-%\usetheme{Montpellier}punto
-%\usetheme{PaloAlto}punto
-%\usetheme{Pittsburgh}punto
-%\usetheme{Rochester}punto
 \usetheme{Singapore}
-%\usetheme{Szeged}
-%\usetheme{Warsaw}
+\usecolortheme{rose}
+\setbeamertemplate{footline}[page number]
 
-% As well as themes, the Beamer class has a number of color themes
-% for any slide theme. Uncomment each of these in turn to see how it
-% changes the colors of your current slide theme.
-
-%\usecolortheme{albatross}fondo azul
-%\usecolortheme{beaver}titulos rojos
-%\usecolortheme{beetle}fondo gris
-%\usecolortheme{crane} resaltado amarillo
-%\usecolortheme{dolphin} titulos azules
-%\usecolortheme{dove} titulos negros
-%\usecolortheme{fly} fondo gris, titulos blancos
-%\usecolortheme{lily} ??
-%\usecolortheme{orchid} ??
-\usecolortheme{rose} %punto
-%\usecolortheme{seagull} adornos gris
-%\usecolortheme{seahorse} partes gris
-%\usecolortheme{whale} partes azul
-%\usecolortheme{wolverine} resalto amarillo
-
-%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
-\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-
-\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+\setbeamertemplate{navigation symbols}{} 
 }
 
 \usepackage{graphicx} % Allows including images
@@ -81,13 +30,10 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{color}
-%\usepackage[utf8]{inputenc}
-%\usepackage[spanish]{babel}
 
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
 \definecolor{delim}{RGB}{25,134,57}
-%\definecolor{delim}{RGB}{20,105,176}
 \colorlet{numb}{magenta!60!black}
 
 \lstdefinelanguage{json}{
@@ -122,12 +68,11 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[AureliaJS]{AureliaJS} % The short title appears at the bottom of every slide, the full title is only on the title page
-
-\author{Jesse Javier Cogollo Alvarez} % Your name
-\institute[EAFIT - TalosDigital] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\title[AureliaJS]{AureliaJS} 
+\author{Jesse Javier Cogollo Alvarez}
+\institute[EAFIT - TalosDigital]
 {
-Developer by passion \\ % Your institution for the title page
+Developer by passion \\
 \medskip
 \textit{email: cogollo87@gmail.com} \\~\\
 \textit{MedellinJS}
@@ -149,17 +94,16 @@ Developer by passion \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{TDD - Test Driven Development} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{AureliaJS} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 \begin{frame}
-\frametitle{Que es TDD}
-Es una practica de programaci\'on orientada a objetos. Que se basa en la repetici\'on 
-de un \textbf{ciclo} de desarrollo muy corto.
-{\color{blue}\url{http://en.wikipedia.org/wiki/Test-driven_development/}}
+\frametitle{Que es Aurelia?}
+Aurelia is a next generation JavaScript client framework that leverages simple conventions to empower your creativity.
+{\color{blue}\url{http://aurelia.io/}}
 \\~\\
-Kent Beck
+Rob Eisenberg
 
-{\color{blue}\url{http://en.wikipedia.org/wiki/Kent_Beck}}
+{\color{blue}\url{robeisenberg.com}}
 
 %\begin{figure}
 %\includegraphics[width=0.3\linewidth]{tdd.png}
@@ -168,12 +112,14 @@ Kent Beck
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Ciclo TDD}
+\frametitle{Caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item \textbf{Escribir prueba}
+\item \textbf{Forward-thinking}
+\item[•]	
+\item[•]	
 \item[•]	
 \item[•]	
 \item[•]	
@@ -182,22 +128,22 @@ Kent Beck
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.9\linewidth]{tdd.png}
-%\end{figure}
+Escrito con ES6 y ES7. se integra con web components. no tiene dependencias externas (excepto polyfills).
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Ciclo TDD}
+\frametitle{Caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item \textbf{Escribir prueba}
-\item {\color{red}\textbf{Correr Pruebas}}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item[•]	
+\item[•]	
 \item[•]	
 \item[•]	
 \item[•]	
@@ -205,97 +151,143 @@ Kent Beck
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.9\linewidth]{tdd.png}
-%\end{figure}
+Aurelia esta compuesto por pequenos modulos. Utiliados juntos como un completo framework. Pero tambien permite personalizarlo con diferentes modulos.
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Ciclo TDD}
+\frametitle{Caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item \textbf{Escribir prueba}
-\item {\color{red}\textbf{Correr Pruebas}}
-\item \textbf{Escribir Codigo}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item \textbf{Two-Way Databinding}
+\item[•]	
+\item[•]	
 \item[•]	
 \item[•]	
 \item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.9\linewidth]{tdd.png}
-%\end{figure}
+Aurelia tiene una poderosa two-way binding. el cual utiliza tecnicas adaptativas para utilizar el mecanismo mas eficiente para observar cada propiedad. Object.observer
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Ciclo TDD}
+\frametitle{Caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item \textbf{Escribir prueba}
-\item {\color{red}\textbf{Correr Pruebas}}
-\item \textbf{Escribir Codigo}
-\item {\color{green}\textbf{Correr Pruebas}}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item \textbf{Two-Way Databinding}
+\item \textbf{Extensible HTML}
+\item[•]	
+\item[•]	
 \item[•]	
 \item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.9\linewidth]{tdd.png}
-%\end{figure}
+La extensibilidad HTML de Aurelia permite crear elementos HTML personalizados, anadir nuevos comportamientos para elementos ya existentes.
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Ciclo TDD}
+\frametitle{Caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item \textbf{Escribir prueba}
-\item {\color{red}\textbf{Correr Pruebas}}
-\item \textbf{Escribir Codigo}
-\item {\color{green}\textbf{Correr Pruebas}}
-\item \textbf{Refactoriar Codigo}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item \textbf{Two-Way Databinding}
+\item \textbf{Extensible HTML}
+\item \textbf{Routing and UI Composition}
+\item[•]	
+\item[•]	
 \item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.9\linewidth]{tdd.png}
-%\end{figure}
+Router con acoplamiento activo, patrones de ruta dinamica, activacion de pantallas asincronicamente, etc.
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Ciclo TDD}
+\frametitle{Caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item \textbf{Escribir prueba}
-\item {\color{red}\textbf{Correr Pruebas}}
-\item \textbf{Escribir Codigo}
-\item {\color{green}\textbf{Correr Pruebas}}
-\item \textbf{Refactoriar Codigo}
-\item {\color{purple}\textbf{Correr Pruebas}}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item \textbf{Two-Way Databinding}
+\item \textbf{Extensible HTML}
+\item \textbf{Routing and UI Composition}
+\item \textbf{MV* with Conventions}
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.9\linewidth]{tdd.png}
-%\end{figure}
+Quieres invertir tiempo en escribir codigo de configuracion? Aurelia maneja una convecion simple.
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Caracteristicas}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item \textbf{Two-Way Databinding}
+\item \textbf{Extensible HTML}
+\item \textbf{Routing and UI Composition}
+\item \textbf{MV* with Conventions}
+\item \textbf{Broad Language Support}
+\item[•]	
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+Utiliza ES5, ES6, TypeScript, AtScript, CoffeeScript. 
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Caracteristicas}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\item \textbf{Forward-thinking}
+\item \textbf{Modern Architecture}
+\item \textbf{Two-Way Databinding}
+\item \textbf{Extensible HTML}
+\item \textbf{Routing and UI Composition}
+\item \textbf{MV* with Conventions}
+\item \textbf{Broad Language Support}
+\item \textbf{Testable}
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+combinando modulos ES6 con contenedor inyeccion de dependencias. se hace mas facil crear codigo altamente cohesivo y bajo acoplamiento. haciendo las pruebas unitarias algo facil.
 \end{columns}
 \end{frame}
 
