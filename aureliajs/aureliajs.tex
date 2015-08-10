@@ -343,12 +343,7 @@ descomprimimos y ya tenemos una estrutura lista para utilizar:
 Esta libreria es parte de la plataforma aurelia y contiene un "Appender" para el logging.
 \\~\\
 uso:
-\\~\\
-import {computedFrom, LogManager} from 'aurelia-framework';
-\\~\\
-var logger = LogManager.getLogger('mi log');
-\\~\\
-logger.info('log info');
+welcome.js
 \end{columns}
 \end{frame}
 
@@ -365,29 +360,30 @@ logger.info('log info');
 \column{.5\textwidth} % Right column and width
 Aurelia permite crear e implementar plugins que se adaptan a Aurelia.
 Estos plugins se configuran en:
-\\~\\ <body aurelia-app="namefile">
+implementación: index.html
+uso: animation-main.js
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
-\begin{frame}
-\frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+%\begin{frame}
+%\frametitle{Caracteristicas}
+%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top %vertical alignment
 
-\column{.45\textwidth} % Left column and width
-\begin{itemize}
-\item \textbf{Aurelia Object}
-\end{itemize}
+%\column{.45\textwidth} % Left column and width
+%\begin{itemize}
+%\item \textbf{Aurelia Object}
+%\end{itemize}
 
-\column{.5\textwidth} % Right column and width
-Aurelia Object (TODO)
-\end{columns}
-\end{frame}
+%\column{.5\textwidth} % Right column and width
+%Aurelia Object (TODO)
+%\end{columns}
+%\end{frame}
 
 %------------------------------------------------
 \begin{frame}
 \frametitle{Vistas y vistas modelos}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\begin{columns}[c]
 
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
@@ -395,24 +391,26 @@ Aurelia Object (TODO)
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
-DI inyeccion de dependencias (TODO)
+Los AureliaElements son creados como clases los cuales son instaciados por el framework usando contenedor de inyeccion de dependencias.
+\\~\\
+uso: flickr.js
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
-\begin{frame}
-\frametitle{Vistas y vistas modelos}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+%\begin{frame}
+%\frametitle{Vistas y vistas modelos}
+%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-\column{.45\textwidth} % Left column and width
-\begin{itemize}
-\item \textbf{Modelos de vista padre}
-\end{itemize}
+%\column{.45\textwidth} % Left column and width
+%\begin{itemize}
+%\item \textbf{Modelos de vista padre}
+%\end{itemize}
 
-\column{.5\textwidth} % Right column and width
-Modelos de vista padre (TODO)
-\end{columns}
-\end{frame}
+%\column{.5\textwidth} % Right column and width
+%Modelos de vista padre (TODO)
+%\end{columns}
+%\end{frame}
 
 %------------------------------------------------
 \begin{frame}
@@ -425,7 +423,11 @@ Modelos de vista padre (TODO)
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
-Plantillas (TODO)
+El motor de plantillas de aurelia es el encargado de cargar las vistas y sus recursos, compilando su HTML para un optimo desempeno y renderizando el UI en la pantalla.
+\\~\\
+<template> </template>. Todo lo que este adentro de esas etiquetas sera administrado por aurelia.
+\\~\\
+uso: welcome.html
 \end{columns}
 \end{frame}
 
@@ -433,7 +435,7 @@ Plantillas (TODO)
 %------------------------------------------------
 \begin{frame}
 \frametitle{Databiding}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\begin{columns}[c] 
 
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
@@ -441,92 +443,145 @@ Plantillas (TODO)
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
-Databiding (TODO)
+El Databinding nos permite enlazar el estado y comportamiento en un objeto(js) y una vista(html).
+\\~\\
+Cualquier cambio es enlazado y/o sincronizado en una o varias direcciones. Se puede diferenciar en la vista por que el elemento va seguido de un punto en el atributo con el valor (bind, one-way, two-way o one-time).
+\\~\\
+implementación: welcome.html
 \end{columns}
 \end{frame}
 %------------------------------------------------
-
 \begin{frame}
-\frametitle{Coding Dojo}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\frametitle{Bindings}
+\begin{columns}[c]
 
 \column{.45\textwidth} % Left column and width
-\begin{enumerate}
-\item \textbf{Que es}
-\item \textbf{estilo 1}
-\item[•]
-\item[•]
-\item[•]
-
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-\textbf{randori} Muchos programadores un problema.
-\end{columns}
-\end{frame}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Coding Dojo}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\begin{enumerate}
-\item \textbf{Que es}
-\item \textbf{estilo 1}
-\item \textbf{estilo 2}
-\item[•]
-\item[•]
-
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Pair programming en paralelo. (Cyberdojo.org)
-\end{columns}
-\end{frame}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Coding Dojo}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\begin{enumerate}
-\item \textbf{Que es}
-\item \textbf{estilo 1}
-\item \textbf{estilo 2}
-\item \textbf{estilo 3}
-\item[•]
-
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Trabajando bajo presi\'on. (Extreme startup)
-\end{columns}
-\end{frame}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Coding Dojo}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\begin{enumerate}
-\item \textbf{Que es}
-\item \textbf{estilo 1}
-\item \textbf{estilo 2}
-\item \textbf{estilo 3}
-\item \textbf{recursos}
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
 \begin{itemize}
-\item Un computador con el ambiente de desarrollo listo. 
-\item un projector 
-\item un lugar para runirse
-\item un facilitador
-\item entre 4 y muchos programadores con ganas de divertirse.
+\item \textbf{delegate, trigger and call}
 \end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{string interpolation}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{ref}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{select elements}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{radios}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{checkboxes}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{InnerHTML}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{textContent}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{style}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+TODO
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Bindings}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{adaptive binding}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+TODO
 \end{columns}
 \end{frame}
 %------------------------------------------------
