@@ -614,7 +614,8 @@ Implementacion: TODO Important
 
 \column{.5\textwidth} % Right column and width
 \\~\\
-Implementacion: TODO Important
+Nos permite condicionar si un elemento o elementos seran visibles o no en el DOM
+Implementacion: TODO
 \end{columns}
 \end{frame}
 %------------------------------------------------
@@ -627,6 +628,7 @@ Implementacion: TODO Important
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+Tiene el mismo comportamiento que el "show". lo que lo hace diferente es que esta etiqueta si remueve el componente del DOM.
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -641,6 +643,7 @@ Implementacion: TODO Important
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+Este atributo permite renderizar un template multiples veces y trabaja en conjunto con el ".for"
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -651,10 +654,11 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
-\item \textbf{\$parent}
+\item \textbf{repeat \$parent}
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+permite acceder a las propiedades de la viewModel.
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -665,10 +669,11 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
-\item \textbf{\$index}
+\item \textbf{repeat \$index}
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+Es el index del item en el array
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -679,10 +684,11 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
-\item \textbf{\$first}
+\item \textbf{repeat \$first}
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+es verdadero si es el primer item del array
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -693,10 +699,11 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
-\item \textbf{\$last}
+\item \textbf{repeat \$last}
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+es verdadero si es el ultimo item del array.
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -707,10 +714,11 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
-\item \textbf{\$even}
+\item \textbf{repeat \$even}
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+es verdadero si el item es un numero par
 \\~\\
 Implementacion: TODO Important
 \end{columns}
@@ -721,42 +729,44 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
-\item \textbf{\$odd}
+\item \textbf{repeat \$odd}
 \end{itemize}
 
 \column{.5\textwidth} % Right column and width
+es verdadero si el item es un numero impar
 \\~\\
 Implementacion: TODO Important
 \end{columns}
 \end{frame}
 %------------------------------------------------
-\begin{frame}
-\frametitle{HTML Extensions}
-\begin{columns}[c]
-\column{.45\textwidth} % Left column and width
-\begin{itemize}
-\item \textbf{compose}
-\end{itemize}
+%\begin{frame}
+%\frametitle{HTML Extensions}
+%\begin{columns}[c]
+%\column{.45\textwidth} % Left column and width
+%\begin{itemize}
+%\item \textbf{compose}
+%\end{itemize}
 
-\column{.5\textwidth} % Right column and width
-\\~\\
-Implementacion: TODO Important
-\end{columns}
-\end{frame}
+%\column{.5\textwidth} % Right column and width
+
+%\\~\\
+%Implementacion: TODO Important
+%\end{columns}
+%\end{frame}
 %------------------------------------------------
-\begin{frame}
-\frametitle{HTML Extensions}
-\begin{columns}[c]
-\column{.45\textwidth} % Left column and width
-\begin{itemize}
-\item \textbf{\$global behavior}
-\end{itemize}
+%\begin{frame}
+%\frametitle{HTML Extensions}
+%\begin{columns}[c]
+%\column{.45\textwidth} % Left column and width
+%\begin{itemize}
+%\item \textbf{\$global behavior}
+%\end{itemize}
 
-\column{.5\textwidth} % Right column and width
-\\~\\
-Implementacion: TODO Important
-\end{columns}
-\end{frame}
+%\column{.5\textwidth} % Right column and width
+%\\~\\
+%Implementacion: TODO Important
+%\end{columns}
+%\end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
