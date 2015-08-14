@@ -773,6 +773,145 @@ Implementacion: TODO Important
 \begin{columns}[c]
 \column{.45\textwidth} % Left column and width
 \begin{itemize}
+\item \textbf{descripcion}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+Cuando implementas enrutadores, tienes varias posibilidades de implementarlo, como: navegacion de la App, dashboards y MDI interfaces.
+\\~\\
+El Routing de Aurelia, el Router que vive en los viewModels y los router-view que viven en las vistas.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{que podemos hacer}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+rutas estaticas: /contactUs
+\\~\\
+rutas parametriables: /user/:userId/dasboard
+\\~\\
+rutas wilcard: file*path
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{Ciclo de vida}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+Existen 4 estados:
+\\~\\
+canActivate: permite validar si se puede navegar en el viewModel.
+\\~\\
+activate: permite implementar logica antes del que el viewModel sea cargado.
+\\~\\
+canDeactivate: permite controlar si deseo que en ese momento se pueda abandonar el viewModel.
+\\~\\
+deactivate: permite implementar logica una vez el viewModel ya fue cambiado.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{Convencion de enrutadores}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+Implementacion: TODO Important
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{Personalizando el enrutador}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+Aurelia nos permite agregar pasos en el proceso del Router, los que nos permite agregar validaciones de permisos.
+\\~\\
+Implementacion: TODO Important!!!
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{pushState}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+si asi lo prefieres, puedes remover el hash de la url.
+\\~\\
+Implementacion: TODO Important!!!
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{reutilizando un viewModel existente}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+si alguna vez usted quiere implementar la misma vista para diferentes rutas.
+\\~\\
+Implementacion: TODO Important
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{renderizando multiples viewPorts}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+si alguna vez necesitas renderizar contenido en mas de un area con la misma ruta.
+\\~\\
+Implementacion: TODO Important !!!
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
+\item \textbf{Rutas personalizadas}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+Aurelia nos permite generar Routes personalizados.
+\\~\\
+Implementacion: TODO Important!!!
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Extendiendo HTML}
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\begin{itemize}
 \item \textbf{TODO}
 \end{itemize}
 
