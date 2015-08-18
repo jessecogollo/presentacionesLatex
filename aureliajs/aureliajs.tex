@@ -10,32 +10,26 @@
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND THEMES
 %----------------------------------------------------------------------------------------
 
 \documentclass{beamer}
-
 \mode<presentation> {
 \usetheme{Singapore}
 \usecolortheme{rose}
 \setbeamertemplate{footline}[page number]
-
 \setbeamertemplate{navigation symbols}{}
 }
-
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{color}
-
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
 \definecolor{delim}{RGB}{25,134,57}
 \colorlet{numb}{magenta!60!black}
-
 \lstdefinelanguage{json}{
     basicstyle=\normalfont\ttfamily,
     numbers=left,
@@ -98,24 +92,17 @@ Developer by passion \\
 %------------------------------------------------
 \begin{frame}
 \frametitle{Que es Aurelia?}
-Aurelia is a next generation JavaScript client framework that leverages simple conventions to empower your creativity.
+Aurelia es un Framework javascript al lado del servidor. Que maneja simples convenciones.
 {\color{blue}\url{http://aurelia.io/}}
 \\~\\
 Rob Eisenberg
-
 {\color{blue}\url{robeisenberg.com}}
-
-%\begin{figure}
-%\includegraphics[width=0.3\linewidth]{tdd.png}
-%\end{figure}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item[•]
@@ -126,19 +113,15 @@ Rob Eisenberg
 \item[•]
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Escrito con ES6 y ES7. se integra con web components. no tiene dependencias externas (excepto polyfills).
+\column{.5\textwidth}
+Escrito con ES6 y ES7. se integra con Web components. no tiene dependencias externas (excepto polyfills).
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
-
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -149,18 +132,15 @@ Escrito con ES6 y ES7. se integra con web components. no tiene dependencias exte
 \item[•]
 \item[•]
 \end{enumerate}
-
 \column{.5\textwidth} % Right column and width
-Aurelia esta compuesto por pequenos modulos. Utiliados juntos como un completo framework. Pero tambien permite personalizarlo con diferentes modulos.
+Aurelia esta compuesto por peque\~nos m\'odulos. Utilizados juntos como un completo Framework. Pero tambi\'en permite personalizarlo con diferentes m\'odulos.
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -171,18 +151,15 @@ Aurelia esta compuesto por pequenos modulos. Utiliados juntos como un completo f
 \item[•]
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Aurelia tiene una poderosa two-way binding. el cual utiliza tecnicas adaptativas para utilizar el mecanismo mas eficiente para observar cada propiedad. Object.observer
+\column{.5\textwidth}
+Aurelia tiene una poderosa two-way binding. el cual utiliza t\'ecnicas adaptativos para utilizar el mecanismo mas eficiente para observar cada propiedad. Object.observer
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -193,18 +170,15 @@ Aurelia tiene una poderosa two-way binding. el cual utiliza tecnicas adaptativas
 \item[•]
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-La extensibilidad HTML de Aurelia permite crear elementos HTML personalizados, anadir nuevos comportamientos para elementos ya existentes.
+\column{.5\textwidth}
+La extensibilidad HTML de Aurelia permite crear elementos HTML personalizados, a\~nadir nuevos comportamientos para elementos ya existentes.
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -215,18 +189,15 @@ La extensibilidad HTML de Aurelia permite crear elementos HTML personalizados, a
 \item[•]
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Router con acoplamiento activo, patrones de ruta dinamica, activacion de pantallas asincronicamente, etc.
+\column{.5\textwidth}
+Router con acoplamiento activo, patrones de ruta din\'amica, activaci\'on de pantallas asincr\'onicamente, etc.
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -237,20 +208,15 @@ Router con acoplamiento activo, patrones de ruta dinamica, activacion de pantall
 \item[•]
 \item[•]
 \end{enumerate}
-
 \column{.5\textwidth} % Right column and width
-Quieres invertir tiempo en escribir codigo de configuracion? Aurelia maneja una convecion simple.
+Quieres invertir tiempo en escribir c\'odigo de configuraci\'on? Aurelia maneja una convenci\'on simple.
 \end{columns}
 \end{frame}
-
-%------------------------------------------------
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -261,20 +227,15 @@ Quieres invertir tiempo en escribir codigo de configuracion? Aurelia maneja una 
 \item \textbf{Broad Language Support}
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Utiliza ES5, ES6, TypeScript, AtScript, CoffeeScript.
 \end{columns}
 \end{frame}
-
-%------------------------------------------------
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Caracteristicas}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Forward-thinking}
 \item \textbf{Modern Architecture}
@@ -285,149 +246,87 @@ Utiliza ES5, ES6, TypeScript, AtScript, CoffeeScript.
 \item \textbf{Broad Language Support}
 \item \textbf{Testable}
 \end{enumerate}
-
 \column{.5\textwidth} % Right column and width
-combinando modulos ES6 con contenedor inyeccion de dependencias. se hace mas facil crear codigo altamente cohesivo y bajo acoplamiento. haciendo las pruebas unitarias algo facil.
+combinando m\'odulos ES6 con contenedores inyecci\'on de dependencias. se hace mas f\'acil crear c\'odigo altamente cohesivo y bajo acoplamiento. haciendo las pruebas unitarias algo f\'acil.
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
-
 \begin{frame}
 \frametitle{Como empezar - Estructura}
-Descargamos la ultima version del skeleton de aurelia.
+Descargamos la ultima versi\'on del skeleton de Aurelia.
 \\~\\
 {\color{blue}\url{https://github.com/aurelia/skeleton-navigation/releases/tag/0.15.1}}
 \\~\\
-descomprimimos y ya tenemos una estrutura lista para utilizar:
+descomprimimos y ya tenemos una estructura lista para utilizar:
 \begin{itemize}
 \item build (configuracion gulp).
 \item doc (documentacion).
 \item src (codificacion).
 \item styles (estilos CSS).
 \item test (pruebas).
-\item README.md (instrucciones para utilizar AureliaJS).
+\item README.md (instrucciones para empezar con AureliaJS).
 \end{itemize}
 \end{frame}
-
-%------------------------------------------------
-
-%------------------------------------------------
-
-%\begin{frame}
-%\frametitle{Como empezar}
-%Descargamos la ultima version del skeleton de aurelia.
-%\begin{itemize}
-%\item No utilizan el modelo relacional.
-%\item Corren bien en clusters.
-%\item Open-source.
-%\item sin esquemas.
-%\item El resultado mas importante del aumento de las bases de datos NoSQL es la {\color{green}Persistencia %Poliglota}.
-%\end{itemize}
-%{\color{blue}\url{Descargar: https://github.com/aurelia/skeleton-navigation/releases/tag/0.15.1}}
-%\end{frame}
-
-%------------------------------------------------
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Modulos}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{logging}
 \end{itemize}
-
 \column{.5\textwidth} % Right column and width
-Esta libreria es parte de la plataforma aurelia y contiene un "Appender" para el logging.
+Esta librer\'ia es parte de la plataforma Aurelia y contiene un "Appender" para el logging.
 \\~\\
-uso:
-welcome.js
+Implementaci\'on:
+\textbf{welcome.js}
 \end{columns}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Modulos}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Plugins}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Aurelia permite crear e implementar plugins que se adaptan a Aurelia.
-Estos plugins se configuran en:
-implementación: index.html
-uso: animation-main.js
+\column{.5\textwidth}
+Aurelia permite crear e implementar plugins que se adaptan al Framework.
+implementaci\'on:
+\\~\\
+\textbf{index.html}
+\\~\\
+\textbf{animation-main.js}
 \end{columns}
 \end{frame}
-
-%------------------------------------------------
-%\begin{frame}
-%\frametitle{Caracteristicas}
-%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top %vertical alignment
-
-%\column{.45\textwidth} % Left column and width
-%\begin{itemize}
-%\item \textbf{Aurelia Object}
-%\end{itemize}
-
-%\column{.5\textwidth} % Right column and width
-%Aurelia Object (TODO)
-%\end{columns}
-%\end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Vistas y vistas modelos}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{DI inyeccion de dependencias}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Los AureliaElements son creados como clases los cuales son instaciados por el framework usando contenedor de inyeccion de dependencias.
+\column{.5\textwidth}
+Los AureliaElements son creados como clases los cuales son llamados por el Framework usando contenedor de inyecci\'on de dependencias.
 \\~\\
-uso: flickr.js
+implementaci\'on: \textbf{flickr.js}
 \end{columns}
 \end{frame}
-
-%------------------------------------------------
-%\begin{frame}
-%\frametitle{Vistas y vistas modelos}
-%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-%\column{.45\textwidth} % Left column and width
-%\begin{itemize}
-%\item \textbf{Modelos de vista padre}
-%\end{itemize}
-
-%\column{.5\textwidth} % Right column and width
-%Modelos de vista padre (TODO)
-%\end{columns}
-%\end{frame}
-
 %------------------------------------------------
 \begin{frame}
 \frametitle{Vistas y vistas modelos}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Plantillas}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-El motor de plantillas de aurelia es el encargado de cargar las vistas y sus recursos, compilando su HTML para un optimo desempeno y renderizando el UI en la pantalla.
+\column{.5\textwidth}
+El motor de plantillas de Aurelia es el encargado de cargar las vistas y sus recursos, compilando su HTML para un optimo desempe\~no y renderizado del UI en la pantalla.
 \\~\\
-<template> </template>. Todo lo que este adentro de esas etiquetas sera administrado por aurelia.
+\textless template\textgreater \textless /template\textgreater. Todo lo que este adentro de esas etiquetas ser\'a administrado por Aurelia.
 \\~\\
-uso: welcome.html
+implementaci\'on: \textbf{welcome.html}
 \end{columns}
 \end{frame}
 
