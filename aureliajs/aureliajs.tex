@@ -329,354 +329,298 @@ El motor de plantillas de Aurelia es el encargado de cargar las vistas y sus rec
 implementaci\'on: \textbf{welcome.html}
 \end{columns}
 \end{frame}
-
 \section{DEMO}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Databiding}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Que es}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 El Databinding nos permite enlazar el estado y comportamiento en un objeto(js) y una vista(html).
 \\~\\
 Cualquier cambio es enlazado y/o sincronizado en una o varias direcciones. Se puede diferenciar en la vista por que el elemento va seguido de un punto en el atributo con el valor (bind, one-way, two-way o one-time).
 \\~\\
-implementación: welcome.html
+implementaci\'on: \textbf{welcome.html}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{delegate, trigger and call}
+\item \textbf{Delegate, trigger and call}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Los bindings no solamente conectan elementos o atributos. Tambien son utilizados para lanzar comportamientos.
-Se recomienda utilizar el delegate por defecto por que es el mas eficiente al utilizar la memoria y la cpu.
+\column{.5\textwidth}
+Los bindings no solamente conectan elementos o atributos. Tambi\'en son utilizados para lanzar comportamientos.
+Se recomienda utilizar el delegate por defecto por que es el mas eficiente al utilizar la memoria y la CPU.
 \\~\\
-Implementation: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{string interpolation}
+\item \textbf{String interpolation}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Sintaxis: \${nameVariable}. es un binding de un solo camino, la cual la salida se convierte en un string.
+\column{.5\textwidth}
+Sintaxis: \$\{nameVariable\}. es un binding de un solo camino, la cual la salida se convierte en un string.
 \\~\\
-Implementacion: welcome.html
+Implementaci\'on: \textbf{welcome.html}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{ref}
+\item \textbf{Ref}
 \end{itemize}
-\column{.5\textwidth} % Right column and width
-Es especial para conectar elementos personalizados, utilizando esta tecnica puedes conectar diferentes componentes.
+\column{.5\textwidth}
+Es especial para conectar elementos personalizados, utilizando esta t\'ecnica puedes conectar diferentes componentes.
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{select elements}
+\item \textbf{Select elements}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-"value.bind" es un HTMLSelectElement que tiene un comportamiento especial para soportar seleccion simple y seleccion multiple de valores. normalmente se combina con el elemento repeat. Pero existe otro elemento especial que permite trabajar con objetos "model.bind".
+\column{.5\textwidth}
+"value.bind" es un HTMLSelectElement que tiene un comportamiento especial para soportar seleccion simple y selecci\'on m\'ultiple de valores. normalmente se combina con el elemento repeat. Pero existe otro elemento especial que permite trabajar con objetos "model.bind".
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{radios}
+\item \textbf{Radios}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 "checked.bind" es un HTMLInputElement tiene un comportamiento especial para soportar binding no booleano, como strings y objetos.
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{checkboxes}
+\item \textbf{Checkboxes}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{InnerHTML}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 podemos hacer binding de los elementos innerHTMl con el atributo innerhtml.
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{textContent}
 \end{itemize}
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Podemos hacer binding de los elementos textContect con el atributo textcontent.
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{style}
+\item \textbf{Style}
 \end{itemize}
-\column{.5\textwidth} % Right column and width
-Podemos hacer binding a los string css u objetos en un elemento style.
+\column{.5\textwidth}
+Podemos hacer binding a los string CSS u objetos en un elemento style.
 \\~\\
-Implementacion: TODO
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Bindings}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{adaptive binding}
+\item \textbf{Adaptive binding}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{show}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 \\~\\
-Nos permite condicionar si un elemento o elementos seran visibles o no en el DOM
-Implementacion: TODO
+Nos permite condicionar si un elemento o elementos ser\'an visibles o no en el DOM.
+Implementaci\'on: \textbf{TODO}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{if}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Tiene el mismo comportamiento que el "show". lo que lo hace diferente es que esta etiqueta si remueve el componente del DOM.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Este atributo permite renderizar un template multiples veces y trabaja en conjunto con el ".for"
+\column{.5\textwidth}
+Este atributo permite renderizar un template m\'ultiples veces y trabaja en conjunto con el ".for"
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat \$parent}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-permite acceder a las propiedades de la viewModel.
+\column{.5\textwidth}
+Permite acceder a las propiedades de la viewModel.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat \$index}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Es el index del item en el array
+\column{.5\textwidth}
+Es el Index del \'item en el array.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat \$first}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-es verdadero si es el primer item del array
+\column{.5\textwidth}
+Es verdadero si es el primer \'item del array.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat \$last}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-es verdadero si es el ultimo item del array.
+\column{.5\textwidth}
+Es verdadero si es el \'ultimo \'item del array.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat \$even}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-es verdadero si el item es un numero par
+\column{.5\textwidth}
+Es verdadero si el \'item es un n\'umero par.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{HTML Extensions}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{repeat \$odd}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-es verdadero si el item es un numero impar
+\column{.5\textwidth}
+Es verdadero si el \'item es un n\'umero impar.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
-%------------------------------------------------
-%\begin{frame}
-%\frametitle{HTML Extensions}
-%\begin{columns}[c]
-%\column{.45\textwidth} % Left column and width
-%\begin{itemize}
-%\item \textbf{compose}
-%\end{itemize}
-
-%\column{.5\textwidth} % Right column and width
-
-%\\~\\
-%Implementacion: TODO Important
-%\end{columns}
-%\end{frame}
-%------------------------------------------------
-%\begin{frame}
-%\frametitle{HTML Extensions}
-%\begin{columns}[c]
-%\column{.45\textwidth} % Left column and width
-%\begin{itemize}
-%\item \textbf{\$global behavior}
-%\end{itemize}
-
-%\column{.5\textwidth} % Right column and width
-%\\~\\
-%Implementacion: TODO Important
-%\end{columns}
-%\end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{descripcion}
+\item \textbf{Descripci\'on}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Cuando implementas enrutadores, tienes varias posibilidades de implementarlo, como: navegacion de la App, dashboards y MDI interfaces.
+\column{.5\textwidth}
+Cuando implementas enrutadores, tienes varias posibilidades de implementarlo, como: navegaci\'on de la App, dashboards y MDI interfaces.
 \\~\\
 El Routing de Aurelia, el Router que vive en los viewModels y los router-view que viven en las vistas.
 \end{columns}
@@ -685,374 +629,322 @@ El Routing de Aurelia, el Router que vive en los viewModels y los router-view qu
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{que podemos hacer}
+\item \textbf{Que podemos hacer}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-rutas estaticas: /contactUs
+\column{.5\textwidth}
+rutas estaticas: \textbf{/contactUs}
 \\~\\
-rutas parametriables: /user/:userId/dasboard
+rutas parametriables: \textbf{/user/:userId/dasboard}
 \\~\\
-rutas wilcard: file*path
+rutas wilcard: \textbf{file*path}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Ciclo de vida}
-\end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\\~\\
 Existen 4 estados:
-\\~\\
-canActivate: permite validar si se puede navegar en el viewModel.
-\\~\\
-activate: permite implementar logica antes del que el viewModel sea cargado.
-\\~\\
-canDeactivate: permite controlar si deseo que en ese momento se pueda abandonar el viewModel.
-\\~\\
-deactivate: permite implementar logica una vez el viewModel ya fue cambiado.
-\end{columns}
-\end{frame}
-%------------------------------------------------
-\begin{frame}
-\frametitle{Routing}
-\begin{columns}[c]
-\column{.45\textwidth} % Left column and width
-\begin{itemize}
-\item \textbf{Convencion de enrutadores}
 \end{itemize}
-\column{.5\textwidth} % Right column and width
-Implementacion: TODO Important
+\column{.5\textwidth}
+\textbf{canActivate:} permite validar si se puede navegar en el viewModel.
+\\~\\
+\textbf{activate:} permite implementar l\'ogica antes del que el viewModel sea cargado.
+\\~\\
+\textbf{canDeactivate:} permite controlar si deseo que en ese momento se pueda abandonar el viewModel.
+\\~\\
+\textbf{deactivate:} permite implementar l\'ogica una vez el viewModel ya fue cambiado.
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Convenc\'ion de enrutadores}
+\end{itemize}
+\column{.5\textwidth}
+Implementaci\'on: \textbf{TODO Important}
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Routing}
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Personalizando el enrutador}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Aurelia nos permite agregar pasos en el proceso del Router, los que nos permite agregar validaciones de permisos.
 \\~\\
-Implementacion: TODO Important!!!
+Implementaci\'on: \textbf{TODO Important!!!}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{pushState}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-si asi lo prefieres, puedes remover el hash de la url.
+\column{.5\textwidth}
+si as\'i lo prefieres, puedes remover el hash de la URL.
 \\~\\
-Implementacion: TODO Important!!!
+Implementaci\'on: \textbf{TODO Important!!!}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{reutilizando un viewModel existente}
+\item \textbf{Reutilizando un viewModel existente}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-si alguna vez usted quiere implementar la misma vista para diferentes rutas.
+\column{.5\textwidth}
+Si alguna vez usted quiere implementar la misma vista para diferentes rutas.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
-\item \textbf{renderizando multiples viewPorts}
+\item \textbf{Renderizando multiples viewPorts}
 \end{itemize}
-\column{.5\textwidth} % Right column and width
-si alguna vez necesitas renderizar contenido en mas de un area con la misma ruta.
+\column{.5\textwidth}
+Si alguna vez necesitas renderizar contenido en mas de un \'area con la misma ruta.
 \\~\\
-Implementacion: TODO Important !!!
+Implementaci\'on: \textbf{TODO Important !!!}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Routing}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Rutas personalizadas}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Aurelia nos permite generar Routes personalizados.
 \\~\\
-Implementacion: TODO Important!!!
+Implementaci\'on: \textbf{TODO Important!!!}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Extendiendo HTML}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Que es}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Aurelia tiene un compilador de templates. Existen dos tipos de extensiones:
 \\~\\
-Atributos personalizados
+\textbf{Atributos personalizados}
 \\~\\
-Elementos personalizados
+\textbf{Elementos personalizados}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Extendiendo HTML}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Atributos personalizados}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Los atributos personalizados extienden el HTML con funcionalidades anadiendo nuevos comportamientos para elementos
+\column{.5\textwidth}
+Los atributos personalizados extienden el HTML con funcionalidades a\~nadiendo nuevos comportamientos para elementos
 existentes.
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Extendiendo HTML}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Elementos personalizados}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Los elementos personalizados crean nuevos tags al HTML.
 \\~\\
-Implementacion: say-hello.js (TODO)
+Implementaci\'on: \textbf{say-hello.js (TODO)}
 \end{columns}
 \end{frame}
-%------------------------------------------------
-%\begin{frame}
-%\frametitle{Extendiendo HTML}
-%\begin{columns}[c]
-%\column{.45\textwidth} % Left column and width
-%\begin{itemize}
-%\item \textbf{pares de plantillas}
-%\end{itemize}
-
-%\column{.5\textwidth} % Right column and width
-
-%\\~\\
-%Implementacion: TODO Important
-%\end{columns}
-%\end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Eventos}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Que es}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
-Es una util herramienta  para cuando se necesita desacoplar componentes y necesita hablar con otro componente.
+\column{.5\textwidth}
+Es una \'util herramienta  para cuando se necesita desacoplar componentes y necesita hablar con otro componente.
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Eventos}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Eventos DOM}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Debe ser utilizado cuando un mensaje especifico es enviado.
 \\~\\
 {\color{blue}\url{https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events}}
 \end{columns}
 \end{frame}
 %------------------------------------------------
-%\begin{frame}
-%\frametitle{Eventos}
-%\begin{columns}[c]
-%\column{.45\textwidth} % Left column and width
-%\begin{itemize}
-%\item \textbf{Aggregator}
-%\end{itemize}
-
-%\column{.5\textwidth} % Right column and width
-%\\~\\
-%Implementacion: TODO Important
-%\end{columns}
-%\end{frame}
-%------------------------------------------------
 \begin{frame}
 \frametitle{HTTP Client}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Que es}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 Aurelia incluye su propia interface para comunicarse con el objeto XMLHttpRequest.
 \\~\\
-Tiene la mayoria de los verbos estandares. ademas incluye jsonp.
-Cuando realizas una petición, este retorna una promesa con el objeto HttpResponseMessage el cual tiene las siguientes propiedades.
+Tiene la mayor\'ia de los verbos est\'andares. adem\'as incluye jsonp.
+Cuando realizas una petici\'on, este retorna una promesa con el objeto HttpResponseMessage.
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
-\frametitle{Personalizacion (Customization)}
+\frametitle{Personalizaci\'on (Customization)}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \begin{itemize}
 \item \textbf{Que es}
 \end{itemize}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 \\~\\
-Implementacion: TODO Important
+Implementaci\'on: \textbf{TODO Important}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{DEMO}
 \begin{columns}[c]
-\column{.45\textwidth} % Left column and width
+\column{.45\textwidth}
 \textbf{=)}
-
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Redes sociales}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Twitter}
 \item[•]
+\item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.5\linewidth]{twitter.png}
-%\end{figure}
+\column{.5\textwidth}
 {\color{blue}@jessecogollo}
 \end{columns}
 \end{frame}
 %------------------------------------------------
-
 \begin{frame}
 \frametitle{Redes sociales}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item Twitter
 \item \textbf{Facebook}
+\item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.5\linewidth]{facebook.png}
-%\end{figure}
+\column{.5\textwidth}
 {\color{blue}/jessecogollo}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
+\frametitle{Redes sociales}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{enumerate}
+\item Twitter
+\item Facebook
+\item \textbf{Github.com/jessecogollo}
+\end{enumerate}
+\column{.5\textwidth}
+{\color{blue}\url{https://github.com/jessecogollo/ama}}
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
 \frametitle{Donde aprender}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item \textbf{Pagina web oficial}
 \item[•]
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.5\linewidth]{distinct.png}
-%\end{figure}
+\column{.5\textwidth}
 {\color{blue}\url{http://aurelia.io/get-started.html}}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Donde aprender}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item Pagina web oficial
 \item \textbf{pluralsight}
 \item[•]
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.5\linewidth]{distinct.png}
-%\end{figure}
+\column{.5\textwidth}
 {\color{blue}\url{http://www.pluralsight.com/courses/building-applications-aurelia}}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Donde aprender}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-\column{.45\textwidth} % Left column and width
+\begin{columns}[c]
+\column{.45\textwidth}
 \begin{enumerate}
 \item Pagina web oficial
 \item pluralsight
 \item \textbf{youtube}
 \end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-%\begin{figure}
-%\includegraphics[width=0.5\linewidth]{distinct.png}
-%\end{figure}
+\column{.5\textwidth}
 {\color{blue}\url{https://www.youtube.com/results?search_query=aurelia+js}}
 \end{columns}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Preguntas}
-%\begin{figure}
-%\includegraphics[width=0.4\linewidth]{preguntas.png}
-%\end{figure}
+\begin{figure}
+\includegraphics[width=0.4\linewidth]{preguntas.png}
+\end{figure}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \Huge{\centerline{Gracias !!! =)}}
 \end{frame}
-
 %----------------------------------------------------------------------------------------
-
 \end{document}
