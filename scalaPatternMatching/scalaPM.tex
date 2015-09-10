@@ -1,0 +1,267 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+\mode<presentation> {
+\usetheme{Singapore}
+\usecolortheme{rose}
+\setbeamertemplate{footline}[page number]
+\setbeamertemplate{navigation symbols}{}
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{25,134,57}
+\colorlet{numb}{magenta!60!black}
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Scala]{Pattern Matching}
+\author{Jesse Javier Cogollo Alvarez}
+\institute[EAFIT]
+{
+Developer by passion \\
+\medskip
+\textit{email: cogollo87@gmail.com} \\~\\
+\textit{Functional programming group}
+}
+%\date{\today} % Date, can be changed to a custom date
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Content} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Pattern Matching} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+\begin{frame}
+\frametitle{what is Pattern Matching?}
+Is the act of checking a given sequence of tokens for the presence of the constituens of some pattern.
+{\color{blue}\url{https://en.wikipedia.org/wiki/Pattern_matching}}
+%Es el acto de checkeat un secuencia de tokens para la presencia de la construcción de algun patrón.
+\\~\\
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Useful}
+\end{itemize}
+\column{.5\textwidth}
+Provide a powerful tool for declaring business logic in a concise and maintainable way.
+%provee una poderosa herramienta para declaración de logica de negocio en un camino conciso y mantenible.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Basic pattern matching}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+Allow you to make a programmatic choice between multiple conditions. cases can include types, wildcards, sequences,regular expressions and so forth.
+% nos permite hacer una selección programatica entre multiples condiciones. los casos pueden incluir tipos, comodines, secuencias, expresiones regulares y mas.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{At its core}
+\end{itemize}
+\column{.5\textwidth}
+Is a complex set of if/else expressions that lets you select from a number of alternatives.
+%Es un complejo conjunto de expresiones if/else que nos permiten seleccionar desde un número de alternativas.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Guard}
+\end{itemize}
+\column{.5\textwidth}
+It is useful to test particular conditions that cannot be tested in the pattern declaration itselft.
+%esto es util para pruebas con condiciones particulares que no pueden ser probados en la declaración del patron.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Lists}
+\end{itemize}
+\column{.5\textwidth}
+Pattern matching and Lists go hand in hand
+\\~\\
+Are inmutable. Is implemented as a linked list where the head of the list is called a cons cell. cons cell is represented by the ::case class
+%son inmutables, es implementado como una lista linkeada donde la cabeza de la lista es llamada una celda constante. es representada por el ::case class.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{case classes}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+Case classes are classes that get to String, hashcode, and equal methods automatically. also can be constructed without using the new keyword. By default are read-only. and the case class is inmutable.
+%los case classes son clases que obtiene los strings, hashCode y metodos iguales automaticamente. tambien puede ser construido sin utilizar la palabra reservada new. Por defecto son de solo lectura y los case class son inmutables.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Nested}
+\end{itemize}
+\column{.5\textwidth}
+Scala's case classes give you a lot of flexibility for pattern matching, estracting values, nesting patterns, and so on. You can express a lot of logic in pattern declarations.
+%las case classes de Scala te ofrecen una gran cantidad de pattern matching, extrayendo valores, anidando patrones, etc. usted puede expresar una gran cantidad de logica en la declaración de patrones.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Pattern matching as functions}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+Are syntactic elements of the language when used with the match operator. You can also pass pattern matching as a parameter to other methods.
+%Son elementos sintacticos de un lenguaje cuando son usados con el operador de emparejamiento. usted tambien puede pasar patrines como un parametro para otro metodo.
+\\~\\
+Pattern are functions and functions are instances, pattern are instances.
+%Patrones son funciones y las funciones son instancias entonces los patrones son instancias.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{characteristics}
+\begin{columns}[c]
+\column{.45\textwidth}
+\begin{itemize}
+\item \textbf{Shape abstractions}
+\end{itemize}
+\column{.5\textwidth} % Right column and width
+Visitor pattern: It is a pattern  that allows you to add functionality to a class hierarchy after the hierarchy is already defined.
+%Patron visitor: este es un patron que permite añadir funcionalidad para una clase heredada despues de que la definicion de la herencia este lista.
+\end{columns}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item Provide powerful declarative syntax for expressing complex logic.
+%Procee una sintaxis declarativa util para expresar logica compleja.
+\item Provide a excellent and type-safe alternative to java's test/cast paradigm.
+%Provee una excelente y alternativa de tipado seguro sobre el paradigma test/cast de java.
+\item Used with case class and extraction provide a powerful way to traverse object hierarchies.
+%uUtilizado con case class y extration provee un util camino para atravesar jerarquia de objetos.
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+\section{DEMO} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+\begin{frame}
+\frametitle{DEMO}
+\begin{columns}[c]
+\column{.45\textwidth}
+\textbf{=)}
+\column{.5\textwidth}
+\end{columns}
+\end{frame}
+%------------------------------------------------	
+\begin{frame}
+\frametitle{Resource}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[]{p1} Beginning Scala
+\newblock http://www.amazon.com/Beginning-Scala-Vishal-Layka/dp/1484202333
+\end{thebibliography}
+}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Questions}
+\begin{figure}
+\includegraphics[width=0.4\linewidth]{preguntas.png}
+\end{figure}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Thanks !!! =)}}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\end{document}
