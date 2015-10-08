@@ -122,7 +122,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[@MongoDB]{@MongoDB - Database No Only SQL} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[@MongoDB]{@MongoDB 3.0} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Jesse Javier Cogollo Alvarez} % Your name
 \institute[SENA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -149,7 +149,7 @@ Developer by passion \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{MongoDB} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{MongoDB 3.0} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
 \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
@@ -159,16 +159,13 @@ Developer by passion \\ % Your institution for the title page
 \begin{lstlisting}[language=json,firstnumber=1]
 {
   "name": "Jesse Javier Cogollo Alvarez",
-  "age": 27,
   "title": "Developer by passion",
   "location": "Medellin, Colombia",
-  "phone": "3207906256",
-  "Marital status": "Married",
   "member": ["@avanet","@MongoDBMedelln"],
   "social": {
     		"facebook": "jessecogollo", 
     		"skype": "jessecogollo", 
-    		"twitter": ["@jessecogollo","@newdevs"]
+    		"twitter": "@jessecogollo"
   }
 }
 \end{lstlisting}
@@ -178,7 +175,7 @@ Developer by passion \\ % Your institution for the title page
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{@MongoDB}
+\frametitle{@MongoDB 3.0}
 \begin{figure}
 \includegraphics[width=0.4\linewidth]{mongodb.png}
 \end{figure}
@@ -205,94 +202,10 @@ Developer by passion \\ % Your institution for the title page
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{NOSQL}
-Las caracteristicas comunes de las bases de datos NoSQL son:
-\begin{itemize}
-\item No utilizan el modelo relacional.
-\item Corren bien en clusters.
-\item Open-source.
-\item sin esquemas.
-\item El resultado mas importante del aumento de las bases de datos NoSQL es la {\color{green}Persistencia Poliglota}.
-\end{itemize}
-{\color{blue}\url{http://martinfowler.com/articles/nosqlKeyPoints.html}}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
 \frametitle{Persistencia poliglota}
 \begin{figure}
 \includegraphics[width=1.0\linewidth]{polyglot.png}
 \end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{JSON}
-\begin{block}{Definici\'on}
- (JavaScript Object Notation) Formato de intercambio de datos.
-\end{block}
-
-\begin{block}{Esquema}
-\end{block}
-
-\begin{block}{Ejemplo}
-\begin{center}
-\{ "llave": "valor" \} \'o \{\}
-\end{center}
-\end{block}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{JSON}
-\begin{block}{Definici\'on array}
- Es el tipo de dato que puede contener un JSON.
-\end{block}
-
-\begin{block}{Esquema}
-\end{block}
-
-\begin{block}{Ejemplo}
-\begin{center}
-["valor1", "sena",2014,true]
-\end{center}
-\end{block}
-
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{JSON}
-\begin{block}{Definici\'on valor}
- Es el tipo de dato que puede contener un JSON.
-\end{block}
-
-\begin{block}{value}
-\end{block}
-
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{JSON}
-\begin{block}{Esquema string}
-\end{block}
-
-\end{frame}
-
-%------------------------------------------------
-
-
-\begin{frame}
-\frametitle{JSON}
-\begin{block}{Esquema number}
-\end{block}
-
 \end{frame}
 
 %------------------------------------------------
@@ -479,56 +392,142 @@ util utillizarlo para almacenar imagenes, audio, video, archivos de texto, etc..
 \end{columns}
 \end{frame}
 
+%------------------------------------------------
+\begin{frame}
+\frametitle{Nuevas caracteristicas}
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{mongodb3.png}
+\end{figure}
+\end{frame}
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Caracteristicas}
+\frametitle{Nuevas caracteristicas}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 \column{.45\textwidth} % Left column and width
 \begin{enumerate}
-\item Document-Oriented Storage
-\item Full Index Support
-\item Replication
-\item Auto Sharding
-\item Querying
-\item Map Reduce
-\item GridFS
-\item \textbf{Other more...}
+\item \textbf{MongoDB Cloud}
+\item[•]	
+\item[•]	
+\item[•]	
+\item[•]	
 \end{enumerate}
 
 \column{.5\textwidth} % Right column and width
 \begin{itemize}
-\item MMS.
-\item Partner with MongoDB.
-\item Multiples drivers.
+\item MongoDB Cloud.
 \end{itemize}
 
 \end{columns}
 \end{frame}
 
 %------------------------------------------------
+\begin{frame}
+\frametitle{Nuevas caracteristicas}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Instalaci\'on}
-%\begin{example}[Terminal -{http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/}]
-\textbf{Desde Terminal}
-\begin{lstlisting}[language=json,firstnumber=1]
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | sudo tee /etc/apt/sources.list.d/mongodb.list
-sudo apt-get update
-sudo apt-get install -y mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org-shell=2.6.1 mongodb-org-mongos=2.6.1 mongodb-org-tools=2.6.1
-sudo service mongod start
-mongo
-\end{lstlisting}
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\item MongoDB Cloud
+\item \textbf{WiredTiger}
+\item[•]	
+\item[•]	
+\item[•]	
+\end{enumerate}
 
-%\end{example}
+\column{.5\textwidth} % Right column and width
+\begin{itemize}
+\item ver camiseta del desconferencista.
+\end{itemize}
+
+\end{columns}
 \end{frame}
 
 %------------------------------------------------
-
 \begin{frame}
-\frametitle{SHELL}
+\frametitle{Nuevas caracteristicas}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\item MongoDB Cloud
+\item WiredTiger
+\\~\\
+\textbf{Native compression}
+\item[•]	
+\item[•]	
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+Options:
+\begin{itemize}
+\item No compression
+\item Snappy (default)
+\item zlib (similar to gzip)
+\end{itemize}
+
+Options indexes:
+\begin{itemize}
+\item No compression
+\item Prefix (default)
+\end{itemize}
+
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Nuevas caracteristicas}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\item MongoDB Cloud
+\item WiredTiger
+\\~\\
+\textbf{Puggable}
+\item[•]	
+\item[•]	
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+\begin{figure}
+\includegraphics[width=1\linewidth]{pluggable.png}
+\end{figure}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Nuevas caracteristicas}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\begin{enumerate}
+\item MongoDB Cloud
+\item WiredTiger
+\item \textbf{queries}
+\item[•]	
+\item[•]	
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+\begin{itemize}
+\item explain()
+\item Multi-Hemisphere Queries
+\item \$dateToString
+\end{itemize}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{quiero empezar con WiredTiger}
+\textbf{Desde Terminal}
+\begin{lstlisting}[language=json,firstnumber=1]
+mongod --storageEngine wiredTiger
+\end{lstlisting}
 \end{frame}
 
 %------------------------------------------------
@@ -592,17 +591,17 @@ mongo
 \begin{frame}
 \frametitle{Insert Find Update Remove (CRUD)}
 \begin{block}{\textbf{I}FUR}
-db.collection.insert(\{"name":"sena","description":"CEGE"\})
+db.collection.insert(\{"name":"jesse","age":28\})
 \end{block}
 \begin{block}{I\textbf{F}UR}
-db.collection.find(\{"name":"sena"\})
+db.collection.find(\{"name":"jesse"\})
 \end{block}
 \begin{block}{IF\textbf{U}R}
-db.collection.update(\{"name":"sena"\},
-\{\$set:\{"description":"CESGE"\}\})
+db.collection.update(\{"name":"jesse"\},
+\{\$set:\{"age":20\}\})
 \end{block}
 \begin{block}{IFU\textbf{R}}
-db.collection.remove(\{"name":"sena"\})
+db.collection.remove(\{"name":"jesse"\})
 \end{block}
 \end{frame}
 
@@ -911,8 +910,14 @@ db.collection.remove(\{"name":"sena"\})
 }
 \footnotesize{
 \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[]{p1} Caracteristicas
+\bibitem[]{p1} Documentaci\'on y Recursos
 \newblock https://www.mongodb.org/
+\end{thebibliography}
+}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[]{p1} MongoDB Cloud
+\newblock https://www.mongodb.com/
 \end{thebibliography}
 }
 \end{frame}
@@ -920,14 +925,7 @@ db.collection.remove(\{"name":"sena"\})
 %------------------------------------------------
 \begin{frame}
 \frametitle{Demo}
-\begin{columns}[c]
-\column{.30\textwidth}
 
-\column{.30\textwidth}
-
-\column{.30\textwidth}
-
-\end{columns}
 \end{frame}
 
 %------------------------------------------------
